@@ -1,3 +1,3 @@
 # grafft.co
 
-Personal website for jason a. grafft, hosted at [grafft.co](http://grafft.co).
+The next personal website for jason a. grafft, not yet hosted at [grafft.co](http://grafft.co).
