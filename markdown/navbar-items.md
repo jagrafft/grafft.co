@@ -1,5 +1,5 @@
-- <span onClick="setContent('markdown/about.md')">about</span>
-- <span onClick="setContent('markdown/cv.md')">cv</span>
-- <span onClick="setContent('https://github.com/jagrafft/presentations/blob/master/README.md')">presentations</span>
-- [github](https://github.com/jagrafft)
-
+- <span onClick="updateContent('markdown/home.md')"><img src="img/home-icon-html-13.jpg" alt="home" width=1% /></span>
+- <span onClick="updateContent('markdown/about.md')">about</span>
+- <span onClick="updateContent('markdown/cv.md')">cv</span>
+- <span onClick="updateContent('https://raw.githubusercontent.com/jagrafft/presentations/master/README.md')">presentations</span>
+- <a href="https://github.com/jagrafft" alt="jason's GitHub page" target="_blank"><img src="img/GitHub-Mark-32px.png" alt="home" width=1% /></a>

@@ -1,5 +1,3 @@
-<center>
-<img src="img/AnscombesQuartet.png" alt="Anscombe's Quartet" width=40% />
+<img src="img/AnscombesQuartet.png" onClick="updateContent('markdown/home.md')" alt="Anscombe's Quartet" width=33% />
 
-Integrity is not certainty.
-</center>
+### *Integrity is not certainty.*

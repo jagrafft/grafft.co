@@ -11,10 +11,21 @@
         <link rel="shortcut icon" type="image/png" href="favicon.png">
         <link rel="icon" type="image/png" href="favicon.png">
 
+		<!-- Open Color -->
 		<link rel="stylesheet" type="text/css" href="css/open-color.css">
+		
+		<!-- -->
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
+		<!-- grafft.js -->
+		<script src="js/grafft.js"></script>
+		
         <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
         <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
 
@@ -33,14 +44,77 @@
 		<!-- zero-md markdown api -->
     	<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
     </head>
-    <body>
-		<!-- Masthead -->
-		<zero-md id="masthead" src="markdown/masthead.md"></zero-md>
-		<!-- Navigation Bar -->
-		<zero-md id="navbar" src="markdown/navbar-items.md"></zero-md>
+    <body onLoad="updateContent('markdown/home.md')">
+		<center>
+			<!-- Masthead -->
+			<zero-md src="markdown/masthead.md">
+				<template>
+					<style>
+						* {
+							margin-top: 1%;
+						}
+						h3 {
+							color: var(--oc-gray-6);
+							font-size: 1.33em;
+							font-style: italic;
+							font-weight: 300;
+						}
+					</style>
+				</template>
+			</zero-md>
+			<!-- Navigation Bar -->
+			<zero-md src="markdown/navbar-items.md">
+				<template>
+					<style>
+						a {
+							color: var(--oc-indigo-5);
+						}
+						a:hover {
+							color: var(--oc-gray-4);
+						}
+						li:hover {
+							color: var(--oc-gray-4);
+							cursor: pointer;
+						}
+						li {
+							display: inline;
+							padding-left: 0.5%;
+							padding-right: 0.5%;
+						}
+						ul {
+							list-style-type: none;
+							margin: 0;
+							padding: 0;
+						}
+					</style>
+				</template>
+			</zero-md>
+		</center>
+
 		<!-- Content Area -->
-        <zero-md id="content" src="markdown/lorem-ipsum.md"></zero-md>
-		<!-- Foot -->
-        <zero-md id="footer" src="markdown/footer.md"></zero-md>
+        <zero-md id="content" manual-render src="markdown/home.md"></zero-md>
+
+		<hr style="border: 1px solid var(--oc-gray-3);">
+		
+		<center>
+			<!-- Foot -->
+    	    <zero-md src="markdown/footer.md">
+	    	    <template>
+					<style>
+						a {
+							color: var(--oc-orange-5);
+						}
+						a:hover {
+							color: var(--oc-gray-5);
+						}
+						p {
+							color: var(--oc-gray-8);
+							font-size: 0.8em;
+							font-weight: 200;
+						}
+					</style>
+				</template>
+    	    </zero-md>
+    	</center>
     </body>
 </html>
