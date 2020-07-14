@@ -1,4 +1,4 @@
-let updateMainView = (view) => {
+let updateCotent = (view) => {
 	// pass markdown document/contents to display pane
 	console.log(view)
 }
