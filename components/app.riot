@@ -1,0 +1,43 @@
+<app>
+	<h6>{state.markdownContent}</h6>
+  <masthead />
+  <navbar />
+  <content markdownContent={ state.markdownContent } />
+  <foot />
+
+  <script>
+    export default {
+      onBeforeMount(props, state) {
+      	this.state.markdownContent = "markdown/home.md"
+      }
+    }
+  </script>
+
+  <style>
+    :host {
+             -ms-text-size-adjust: 100%;
+             -webkit-text-size-adjust: 100%;
+             color: var(--oc-gray-8);
+             font-family: 'Crimson Text', sans-serif;
+             font-size: 1.1em;
+             line-height: 1.2em;
+             margin: 5% 10% 5% 10%;
+             word-wrap: break-word;
+          }
+
+    a {
+         color: var(--oc-indigo-6);
+      }
+
+    a:hover {
+               color: var(--oc-yellow-7);
+            }
+
+    h1,h2,h3,h4,h5,h6 {
+                         color: var(--oc-gray-9);
+                         font-family: 'Montserrat', sans-serif;
+                         margin-top: 0.1em;
+                         margin-bottom: 0.55em; 
+                      }
+  </style>
+</app>

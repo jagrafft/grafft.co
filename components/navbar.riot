@@ -1,0 +1,60 @@
+<navbar>
+	<h6>{state.markdownContent}</h6>
+  <ul>
+    <li>
+      <span onclick={ () => updateContent("markdown/home.md") }><img src="img/home-icon-html-13.jpg" alt="home" width=1% /></span>
+    </li>
+    <li>
+      <span onclick={ () => updateContent("markdown/about.md") }>about</span>
+    </li>
+    <li>
+      <span onclick={ () => updateContent("markdown/cv.md") }>cv</span>
+    </li>
+    <li>
+      <span onclick={ () => updateContent("https://raw.githubusercontent.com/jagrafft/presentations/master/README.md") }>presentations</span>
+    </li>
+    <li>
+      <a href="https://github.com/jagrafft" alt="jason's GitHub page" target="_blank") }><img src="img/GitHub-Mark-32px.png" alt="home" width=1% /></a>
+    </li>
+  </ul>
+  
+  <script>
+  	export default {
+	  	updateContent(content) {
+	  		this.update({
+	  			markdownContent: content
+	  		})
+  		}
+  	}
+  </script>
+
+  <style>
+  	:host {
+  		 	text-align: center;
+  		  }
+    a {
+        color: var(--oc-indigo-5);
+      }
+
+    a:hover {
+              color: var(--oc-gray-4);
+            }
+
+    li:hover {
+               color: var(--oc-gray-4);
+               cursor: pointer;
+              }
+
+    li {
+         display: inline;
+         padding-left: 0.5%;
+         padding-right: 0.5%;
+       }
+
+    ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+       }
+   </style>
+</navbar>

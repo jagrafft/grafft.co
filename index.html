@@ -1,120 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>grafft.co</title>
+        <title>jason a. grafft | grafft.co</title>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="author" content="jason a. grafft">
 
+        <!-- Favorite Icon -->
         <link rel="shortcut icon" type="image/png" href="favicon.png">
         <link rel="icon" type="image/png" href="favicon.png">
 
 		<!-- Open Color -->
 		<link rel="stylesheet" type="text/css" href="css/open-color.css">
 		
-		<!-- -->
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">    	
+    </head>
+    <body>
+    	<app></app>
+    	
+    	<!-- riot tags -->
+	    <script type="riot" src="components/app.riot"></script>
+    	<script type="riot" src="components/masthead.riot"></script>
+	    <script type="riot" src="components/navbar.riot"></script>
+    	<script type="riot" src="components/content.riot"></script>
+    	<script type="riot" src="components/foot.riot"></script>
 
-		<!-- grafft.js -->
-		<script src="js/grafft.js"></script>
+		<!-- riot.js compiler -->
+		<script src="https://cdn.jsdelivr.net/npm/riot@4/riot+compiler.min.js"></script>
 		
+		<!-- zero-md.js -->
         <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
         <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
 
-		<!-- Set global configs. Declare before importing `zero-md` element. -->
-		<!-- These settings will apply to all instances of `zero-md`. -->
- 		<script>
-   			window.ZeroMd = {
-     			config: {
-       				cssUrls: [
-         				'css/grafft-markdown.css'
-	       			]
-     			}
-   			};
- 		</script>
- 
 		<!-- zero-md markdown api -->
     	<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
-    </head>
-    <body onLoad="updateContent('markdown/home.md')">
-		<center>
-			<!-- Masthead -->
-			<zero-md src="markdown/masthead.md">
-				<template>
-					<style>
-						* {
-							margin-top: 1%;
-						}
-						h3 {
-							color: var(--oc-gray-6);
-							font-size: 1.33em;
-							font-style: italic;
-							font-weight: 300;
-						}
-					</style>
-				</template>
-			</zero-md>
-			<!-- Navigation Bar -->
-			<zero-md src="markdown/navbar-items.md">
-				<template>
-					<style>
-						a {
-							color: var(--oc-indigo-5);
-						}
-						a:hover {
-							color: var(--oc-gray-4);
-						}
-						li:hover {
-							color: var(--oc-gray-4);
-							cursor: pointer;
-						}
-						li {
-							display: inline;
-							padding-left: 0.5%;
-							padding-right: 0.5%;
-						}
-						ul {
-							list-style-type: none;
-							margin: 0;
-							padding: 0;
-						}
-					</style>
-				</template>
-			</zero-md>
-		</center>
-
-		<!-- Content Area -->
-        <zero-md id="content" manual-render src="markdown/home.md"></zero-md>
-
-		<hr style="border: 1px solid var(--oc-gray-3);">
-		
-		<center>
-			<!-- Foot -->
-    	    <zero-md src="markdown/footer.md">
-	    	    <template>
-					<style>
-						a {
-							color: var(--oc-orange-5);
-						}
-						a:hover {
-							color: var(--oc-gray-5);
-						}
-						p {
-							color: var(--oc-gray-8);
-							font-size: 0.8em;
-							font-weight: 200;
-						}
-					</style>
-				</template>
-    	    </zero-md>
-    	</center>
-    </body>
+      
+		<script>
+			riot.compile().then(() => {
+				riot.mount('app')
+			})
+		</script>
+	</body>
 </html>
