@@ -1,37 +1,30 @@
 <content>
-  <zero-md id="content-pane" manual-render src="{ props.markdown }">
-      <template>
-       <style>
-        a {
-            color: var(--oc-indigo-5);
-          }
-
-        a:hover {
-                  color: var(--oc-gray-4);
-                }
-
-        li:hover {
-                   color: var(--oc-gray-4);
-                   cursor: pointer;
-                  }
-
-        li {
-             display: inline;
-             padding-left: 0.5%;
-             padding-right: 0.5%;
-           }
-
-        ul {
-             list-style-type: none;
-             margin: 0;
-             padding: 0;
-           }
-      </style>
-    </template>
-  </zero-md>
+  <zero-md 
+    src="{ props.markdown }" 
+    id="content-pane" 
+    manual-render
+  ></zero-md>
   
+  <style>
+    :host {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 66%;
+    }
+  </style>
+
   <script>
     export default {
+      onBeforeMount(props, state) {
+        window.ZeroMd = {
+          config: {
+            cssUrls: [
+              '/css/grafft-markdown.css'
+            ]
+          }
+        }
+      },
       onMounted(props, state) {
         const el = document.getElementById("content-pane")
         el.render()
