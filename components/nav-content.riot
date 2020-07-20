@@ -1,0 +1,60 @@
+<nav-content>
+  <ul class="navbar">
+    <li onclick={ () => updateContent("markdown/home.md") }>
+        <img src="img/home-icon-html-13.jpg" alt="home" width=1.25% />
+    </li>
+    <li onclick={ () => updateContent("markdown/about.md") }>about</li>
+    <li onclick={ () => updateContent("markdown/cv.md") }>cv</li>
+    <li onclick={ () => updateContent("https://raw.githubusercontent.com/jagrafft/presentations/master/README.md") }>presentations</li>
+    <li>
+      <a href="https://github.com/jagrafft" alt="jason's GitHub page" target="_blank") }><img src="img/GitHub-Mark-32px.png" alt="home" width=1.25% /></a>
+    </li>
+  </ul>
+
+  <content markdown={ state.markdown } />
+
+  <script>
+    export default {
+      onBeforeMount(props, state) {
+      	this.state.markdown = "markdown/home.md"
+      },
+      updateContent(content) {
+        this.state.markdown = content
+        this.update()
+      }
+  	}
+  </script>
+
+
+  <style>
+    .navbar {
+      font-size: 1.12em;
+    }
+
+    a {
+        color: var(--oc-indigo-5);
+      }
+
+    a:hover {
+              color: var(--oc-gray-4);
+            }
+
+    li:hover {
+               color: var(--oc-gray-4);
+               cursor: pointer;
+              }
+
+    li {
+         display: inline;
+         padding-left: 0.5%;
+         padding-right: 0.5%;
+       }
+
+    ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+  		 	 text-align: center;
+       }
+   </style>
+</nav-content>

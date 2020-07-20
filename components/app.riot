@@ -1,17 +1,7 @@
 <app>
   <masthead />
-  <navbar />
-  <h6>{state.markdownContent}</h6>
-  <content markdownContent={ state.markdownContent } />
+  <nav-content />
   <foot />
-
-  <script>
-    export default {
-      onBeforeMount(props, state) {
-      	this.state.markdownContent = "markdown/home.md"
-      }
-    }
-  </script>
 
   <style>
     :host {
