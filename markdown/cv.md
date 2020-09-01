@@ -1,1 +1,0 @@
-# Curriculm Vitate
