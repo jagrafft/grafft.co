@@ -12,11 +12,11 @@
     <li>
       <span onclick={ () => updateContent("https://raw.githubusercontent.com/jagrafft/presentations/master/README.md") }>presentations</span>
     </li>
-    <li>
+    <!--<li>
       <a href="https://linkedin.com/" class="grayscale" alt="LinkedIn user ..." target="_blank">
         <img src="img/LI-In-Bug.png" alt="LinkedIn Icon" width=1.55% />
       </a>
-    </li>
+    </li>//-->
     <li>
       <a href="https://github.com/jagrafft" alt="GitHub user jagrafft" target="_blank">
         <img src="img/GitHub-Mark-32px.png" alt="GitHub Icon" width=1.25% />
@@ -34,7 +34,7 @@
   <script>
     export default {
       onBeforeMount(props, state) {
-      	this.state.markdown = "markdown/home.md"
+      	this.state.markdown = "https://raw.githubusercontent.com/jagrafft/markdown-docs/master/grafft_co/welcome.md"
       },
       updateContent(content) {
         this.state.markdown = content
