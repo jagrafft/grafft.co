@@ -1,6 +1,6 @@
 # [grafft.co](http://grafft.co)
 
-My personal website.
+Personal website of Jason A. Grafft. _[Svelte.js][sveltejs] prototype._
 
 ## Acknowledgements
 - [certbot][certbot]
@@ -11,7 +11,7 @@ My personal website.
 - [Home Icon Html #352283][homeicon]
 - [NGINX][nginx]
 - [Open Color][opencolor]
-- [Riot.js][riotjs]
+- [Svelte][sveltejs]
 - [zero-md][zero-md]
 
 [certbot]: https://certbot.eff.org/
@@ -22,5 +22,5 @@ My personal website.
 [montserrat]: https://fonts.google.com/specimen/Montserrat
 [nginx]: https://www.nginx.com/
 [opencolor]: https://yeun.github.io/open-color/
-[riotjs]: https://riot.js.org/
+[sveltejs]: https://svelte.dev/
 [zero-md]: https://zerodevx.github.io/zero-md/

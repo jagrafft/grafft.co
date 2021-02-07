@@ -55,6 +55,7 @@ npm-debug.log
 coverage
 generated
 /dist
+/public/build/
 
 # these files are generated anyway
 .nycrc
