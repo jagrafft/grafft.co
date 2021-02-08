@@ -32,5 +32,5 @@
 </style>
 
 <r-cell span=3-7>
-<ul>{#each navbar.items as nb}<li>{#if nb.img}<img src={nb.path} alt={nb.alt} width={nb.width} />{:else}<span>{nb.label}</span>{/if}</li>{/each}</ul>
+<ul>{#each navbar.items as item, index}<li>{#if item.img}<img src={item.path} alt={item.alt} />{:else}<span>{item.label}</span>{/if}</li>{/each}</ul>
 </r-cell>
