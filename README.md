@@ -7,7 +7,6 @@ Personal website of Jason A. Grafft. _[Svelte.js][sveltejs] prototype._
 - [FontPair][fontpair]
   - [Montserrat][montserrat]
   - [Crimson Text][crimsontext]
-- [HackMD][hackmd]
 - [Home Icon Html #352283][homeicon]
 - [NGINX][nginx]
 - [Open Color][opencolor]
@@ -17,7 +16,6 @@ Personal website of Jason A. Grafft. _[Svelte.js][sveltejs] prototype._
 [certbot]: https://certbot.eff.org/
 [crimsontext]: https://fonts.google.com/specimen/Crimson+Text
 [fontpair]: https://fontpair.co/
-[hackmd]: https://hackmd.io
 [homeicon]: https://icon-library.net/icon/home-icon-html-13.html
 [montserrat]: https://fonts.google.com/specimen/Montserrat
 [nginx]: https://www.nginx.com/
